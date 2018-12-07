@@ -125,16 +125,10 @@
 
             var timeElement = document.getElementById("time")
             timeElement.datetime = dateAndTime[1]
-            timeElement.innerText = dateFns.format(
-                date,
-                "hh:mm"
-            )
+            timeElement.innerText = dateFns.format(date, "hh:mm")
 
             var periodElement = document.getElementById("period")
-            periodElement.innerText = dateFns.format(
-                date,
-                "a"
-            )
+            periodElement.innerText = dateFns.format(date, "a")
 
 
             var dateElement = document.getElementById("date")
