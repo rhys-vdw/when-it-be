@@ -111,6 +111,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.29.0/date_fns.min.js"></script>
     <script>
+        function dateToString(d) {
+            return Math.floor(d.getTime() / 60).toString(36)
+        }
+
+        function stringToDate(s) {
+            return new Date(parseInt(s, 36) * 60)
+        }
+
         function showCreate() {
             document.getElementById("footer").style.display = "none";
             var createElement = document.getElementById("create")
@@ -122,7 +130,7 @@
                 var dateElement = document.querySelector("input[type=time]")
                 var timeString = dateElement.value
                 var date = new Date(dateString + "T" + timeString)
-                window.location.search = "?t=" + date.toISOString()
+                window.location.search = "?t=" + dateToString(date)
             })
         }
 
@@ -170,7 +178,7 @@
         if (match === null) {
             showCreate()
         } else {
-            var date = new Date(match[1])
+            var date = stringToDate(match[1])
             console.log("date " + date.toString())
             if (isNaN(date.getTime())) {
                 showCreate()
