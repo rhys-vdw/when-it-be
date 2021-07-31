@@ -14,7 +14,7 @@ if (process.env.ANALYZE_BUNDLE) {
 const config: webpack.Configuration = {
   mode: process.env.NODE_ENV as webpack.Configuration["mode"],
   devtool: process.env.NODE_ENV === "production" ? undefined : "inline-source-map",
-  entry: "./src/index.js",
+  entry: "./src/index.ts",
   output: {
       path: __dirname,
       filename: "bundle.js"
