@@ -6,8 +6,8 @@
   "scripts": {
     "lint": "standard src/**/*.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "NODE_ENV=production webpack",
-    "dev": "NODE_ENV=development webpack-cli serve",
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "cross-env NODE_ENV=development webpack-cli serve",
     "gh-pages": "./gh-pages.sh",
     "analyze": "ANALYZE_BUNDLE=1 yarn run build"
   },
@@ -31,6 +31,7 @@
     "typescript": "^4.3.5"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "prettier": "^2.3.2",
     "ts-loader": "^9.2.4",
     "webpack": "^5.47.1",
