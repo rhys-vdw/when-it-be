@@ -1,5 +1,7 @@
 #!/bin/bash -e
 
+set -x
+
 git checkout gh-pages
 git pull origin gh-pages --no-edit
 git merge preact --no-edit
