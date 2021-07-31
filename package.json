@@ -1,0 +1,19 @@
+{
+  "name": "when-it-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhys-vdw/when-it-be.git"
+  },
+  "author": "Rhys van der Waerden",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rhys-vdw/when-it-be/issues"
+  },
+  "homepage": "https://github.com/rhys-vdw/when-it-be#readme"
+}
